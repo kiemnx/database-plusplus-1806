@@ -1,13 +1,15 @@
+
 package vn.plusplus.database;
 
+import vn.plusplus.database.models.LaptopEntity;
 import vn.plusplus.database.services.LaptopService;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.Scanner;
+import java.util.List;
 
-public class Application {
+public class ApplicationLaptop {
     public static void main(String[] args) {
         System.out.println("-------- MySQL JDBC Connection Demo ------------");
         try
@@ -22,26 +24,19 @@ public class Application {
         Connection connection = null;
         try {
             connection = DriverManager
-                    .getConnection("jdbc:mysql://localhost:3306/store_cms_plusplus", "root", "1234");
+                    .getConnection("jdbc:mysql://localhost:3306/store_cms_plusplus?characterEncoding=utf8", "root", "kiemnx");
             System.out.println("SQL Connection to database established!");
 
         } catch (SQLException e) {
-            System.out.println("Connection Failed! Check output console");
+            System.out.println("Connection Failed! Check output console"  + e);
             return;
         }
-
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Nhập lựa chọn:");
-        System.out.println("1. Tìm kiếm latop theo hãng");
         LaptopService laptopService = new LaptopService(connection);
+        List<LaptopEntity> result = laptopService.searchLaptop(5000000.0f, null, null, null, null,
+                "intel", null, null, null, null, "DESC");
 
-        int option = scanner.nextInt();
-        scanner.nextLine();
-        switch (option){
-            case 1:
-                System.out.println("Nhập vào hãng:");
-                String maker = scanner.nextLine();
-                laptopService.findAllByMaker(maker.trim().toUpperCase());
+        for(LaptopEntity entity : result){
+            System.out.println(entity.toString());
         }
     }
 }
