@@ -19,6 +19,9 @@ public class LaptopService {
         this.con = connection;
     }
 
+
+
+
     public List<LaptopEntity> findAllByMaker(String maker) {
         String sql = "SELECT * FROM laptop WHERE maker='" + maker + "'";
         List<LaptopEntity> laptopEntities = queryDatabase(sql);
