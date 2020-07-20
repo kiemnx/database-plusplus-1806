@@ -9,8 +9,9 @@ CREATE TABLE `manage_student`.`students` (
   `PlaceOfBirth` VARCHAR(45) NOT NULL,
   `DeptID` VARCHAR(5) NOT NULL,
   `Scholarship` VARCHAR(45) NULL,
+  `AverageScore` FLOAT(2) NULL,
   PRIMARY KEY (`StudentID`));
-INSERT INTO `manage_student`.`students` (`StudentID`, `LastName`, `FirstName`, `Sex`, `DateOfBirth`, `PlaceOfBirth`, `DeptID`, `Scholarship`) VALUES ('S001', 'Lê', 'Kim Lan', 'F', '23/02/1990 ', 'Hà Nội', 'IS ', '130000');
+INSERT INTO `manage_student`.`students` (`StudentID`, `LastName`, `FirstName`, `Sex`, `DateOfBirth`, `PlaceOfBirth`, `DeptID`, `Scholarship`) VALUES ('S001', 'Lê', 'Kim Lan', 'F', '23/02/1990 ', 'Hà Nội', 'IS', '130000');
 INSERT INTO `manage_student`.`students` (`StudentID`, `LastName`, `FirstName`, `Sex`, `DateOfBirth`, `PlaceOfBirth`, `DeptID`, `Scholarship`) VALUES ('S002', 'Trần', 'Minh Chánh', 'M', '24/12/1992', 'Bình Định', 'NC', '150000');
 INSERT INTO `manage_student`.`students` (`StudentID`, `LastName`, `FirstName`, `Sex`, `DateOfBirth`, `PlaceOfBirth`, `DeptID`, `Scholarship`) VALUES ('S003', 'Lê', 'An Tuyết', 'F ', '21/02/1991', 'Hải phòng', 'IS', '170000');
 INSERT INTO `manage_student`.`students` (`StudentID`, `LastName`, `FirstName`, `Sex`, `DateOfBirth`, `PlaceOfBirth`, `DeptID`, `Scholarship`) VALUES ('S004', 'Trần ', 'Anh Tuấn', 'M ', '20/12/1993 ', 'TpHCM', 'NC', '80000');
