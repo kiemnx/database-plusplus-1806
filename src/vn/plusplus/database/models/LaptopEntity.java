@@ -1,6 +1,7 @@
 package vn.plusplus.database.models;
 
 import java.sql.Timestamp;
+import java.text.DecimalFormat;
 
 public class LaptopEntity {
     private int id,sold;
@@ -162,9 +163,11 @@ public class LaptopEntity {
 
     @Override
     public String toString() {
+        DecimalFormat df = new DecimalFormat();
+        df.setMaximumFractionDigits(2);
         return "LaptopEntity{" +
                 "sold=" + sold +
-                ", price=" + price +
+                ", price=" + df.format(price) +
                 ", name='" + name + '\'' +
                 '}';
     }

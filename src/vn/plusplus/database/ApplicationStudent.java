@@ -1,6 +1,6 @@
 package vn.plusplus.database;
 
-public class ApplicationTV {
+public class ApplicationStudent {
     public static void main(String[] args) {
 
     }

@@ -24,7 +24,7 @@ public class ApplicationLaptop {
         Connection connection = null;
         try {
             connection = DriverManager
-                    .getConnection("jdbc:mysql://localhost:3306/store_cms_plusplus?characterEncoding=utf8", "root", "kiemnx");
+                    .getConnection("jdbc:mysql://localhost:3306/store_cms_plusplus?characterEncoding=utf8", "root", "1234");
             System.out.println("SQL Connection to database established!");
 
         } catch (SQLException e) {
