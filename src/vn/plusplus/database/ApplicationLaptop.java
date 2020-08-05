@@ -26,6 +26,7 @@ public class ApplicationLaptop {
             connection = DriverManager
                     .getConnection("jdbc:mysql://localhost:3306/store_cms_plusplus?characterEncoding=utf8", "root", "1234");
             System.out.println("SQL Connection to database established!");
+            connection.close();
 
         } catch (SQLException e) {
             System.out.println("Connection Failed! Check output console"  + e);
